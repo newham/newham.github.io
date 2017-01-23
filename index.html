@@ -1,0 +1,47 @@
+---
+layout: default
+title: Newham's Blog
+---
+
+
+
+
+
+  <div class="row">
+
+    <div class="col-xs-12 col-sm-3">
+      <h1>Categories</h1>
+      <br>
+      {% for category in site.categories %}
+      <div class="list">
+        <a href="#{{ category | first }}" data-toggle="collapse" class="text-uppercase">{{ category | first }} <span class="badge">{{ category | last | size }}</span></a>
+        <div id="{{ category | first }}" class="collapse">
+            <ul>
+                {% for post in category.last %}
+                
+                <li>[{{ post.date | date:"%d/%m/%Y"}}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+                {% endfor %}
+            </ul>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+    <div class="col-xs-12 col-sm-9">
+      <h1>All Articles</h1>
+      {% for post in paginator.posts %}
+      <div class="border-bottom-dashed">
+        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+          {% if post.description %}
+              <p>{{ post.description }}</p>
+          {% endif %}
+        <div class="text-right">{{ post.date | date: "%b %-d, %Y" }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    
+  </div>
+  {% include pagination.html %}

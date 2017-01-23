@@ -1,0 +1,19 @@
+
+<div class="bs-docs-header">
+	<div class="container">
+		
+		<ul class="nav nav-tabs">
+		   	{% if page.url==site.page.about %}
+		   		<li><a href="{{site.baseurl}}/">Home</a></li>
+				<li class="active"><a href="{{site.baseurl}}{{site.page.about}}">About</a></li>
+			{%else%}
+				<li class="active"><a href="{{site.baseurl}}/">Home</a></li>
+				<li><a href="{{site.baseurl}}{{site.page.about}}">About</a></li>
+			{% endif %}
+		     
+		</ul>
+	</div>
+</div>
+
+<!-- <img src="{{ site.baseurl }}/assets/images/home.png"> -->
+<!-- <img src="{{ site.baseurl }}/assets/images/about.png"> -->
