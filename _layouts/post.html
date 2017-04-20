@@ -21,19 +21,19 @@
 						<p>
 							{{ content }}
 						</p>
-					</div>
-					<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
-						{%if page.next.url%}
-						<a href="{{page.next.url}}" class="btn btn-danger btn-round pull-left">
-							Newer
-						</a>
-						{%endif%}
-						{%if page.previous.url%}
-						<a href="{{page.previous.url}}" class="btn btn-danger btn-round pull-right">
-							Older
-						</a>
-						{%endif%}
-						
+						<!--go page-->
+						<div>
+							{%if page.next.url%}
+								<a href="{{page.next.url}}" class="btn btn-danger btn-round pull-left">
+									Newer
+								</a>
+								{%endif%}
+								{%if page.previous.url%}
+								<a href="{{page.previous.url}}" class="btn btn-danger btn-round pull-right">
+									Older
+								</a>
+							{%endif%}
+						</div>
 					</div>
 				</div>
             </div>
