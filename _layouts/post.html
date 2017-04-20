@@ -2,32 +2,44 @@
 <html lang="en">
 {% include head.html %}
 <body>
-
-	
-	
-	<div class="page-top-boder">
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-2 col-sm-1">
-				<a onclick="window.history.go(-1)"><img src="{{ site.baseurl }}/assets/images/back.png" class="btn-icon"></a>
-			</div>
-			<div class="col-xs-10 col-sm-11">
-				 <h1>{{ page.title }}</h1>
-				 <p class="lead">
-				 	[<time>{{ page.date | date_to_string }}</time>] 
-				 	{% if page.author %}
-				 		--{{page.author}}
-				 	{% endif %}
-				 </p>
-			</div>
-			<div class="col-xs-12">
-				
-	  				<p>{{ content }}</p>
-	    		
-			</div>
-		</div>
+	 <div class="main main-raised">
+		 
+        <div class="section section-basic">
+			<a href="{{ site.baseurl }}/"  class="btn btn-warning" style="margin-left:20px;">Home</a>
+            <div class="container">
+                <div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<div class="text-center">
+						<h1>{{ page.title }}</h1>
+						<h4>{{ page.date | date:"%d/%m/%Y" }}</h4>
+						{% if page.author %}
+						<h5>
+						By {{page.author}}
+						</h5>
+						{% endif %}
+						</div>
+						<p>
+							{{ content }}
+						</p>
+					</div>
+					<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+						{%if page.next.url%}
+						<a href="{{page.next.url}}" class="btn btn-danger btn-round pull-left">
+							Newer
+						</a>
+						{%endif%}
+						{%if page.previous.url%}
+						<a href="{{page.previous.url}}" class="btn btn-danger btn-round pull-right">
+							Older
+						</a>
+						{%endif%}
+						
+					</div>
+				</div>
+            </div>
+        </div>
     </div>
+	
     {% include footer.html %}
 </body>
 </html>

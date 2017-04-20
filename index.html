@@ -3,27 +3,23 @@ layout: default
 title: Articles 
 ---
 
-<div class="row" style="background: #eee;">
+<div class="row" style="background: #eee;padding-bottom:15px;border-radius: 3px;">
+
   {% for post in paginator.posts %}
-
-
-
-
-
   <div class="col-md-4 ">
-    <div class="card card-nav-tabs" style="min-height: 500px;">
-      <div class="header header-danger" style="padding-right: 20px;padding-left: 20px;">
+    <div class="card card-nav-tabs" style="min-height: 360px;">
+      <div class="header header-my">
         <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
         </h3>
+        <p class="text-right">{{ post.date | date:"%d/%m/%Y"}}</p>
           {% for label in post.categories %}
-          <span class="label label-info">{{label}}</span> {%endfor%}
+          <span class="label label-success">{{label}}</span> {%endfor%}
       </div>
       <div class="content" >
         <p>
           {% if post.description %} {{ post.description }} {% endif %}
         </p>
-
       </div>
     </div>
     

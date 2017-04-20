@@ -41,14 +41,15 @@ body.inverse .card .form-control {
 }
 
 body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4 {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Microsoft YaHei";
   font-weight: 300;
   line-height: 1.5em;
 }
 
 a, a:hover, a:focus {
   // color: #9c27b0;
-  color: #fff;
+  // color: #fff;
+  color: #555;
 }
 a .material-icons, a:hover .material-icons, a:focus .material-icons {
   vertical-align: middle;
@@ -3644,10 +3645,14 @@ h2.title {
   padding-top: 15px;
 }
 .index-page .header-filter:after {
+  // background: rgba(101, 47, 142, 0.64);
+  // background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+  // background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+  // background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
   background: rgba(101, 47, 142, 0.64);
-  background: linear-gradient(45deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
-  background: -moz-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
-  background: -webkit-linear-gradient(135deg, rgba(101, 47, 142, 0.88) 0%, rgba(125, 46, 185, 0.45) 100%);
+  background: linear-gradient(45deg, rgba(244,119,110, 0.88) 0%, rgba(244,67,54, 0.45) 100%);
+  background: -moz-linear-gradient(135deg, rgba(244,119,110, 0.88) 0%, rgba(244,67,54, 0.45) 100%);
+  background: -webkit-linear-gradient(135deg, rgba(244,119,110, 0.88) 0%, rgba(244,67,54, 0.45) 100%);
 }
 
 .landing-page .header {
