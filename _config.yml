@@ -19,7 +19,7 @@ sass:
   style:            :compressed
 
 # Pagination
-paginate:           5
+paginate:           6
 paginate_path:      /page:num/
 
 gems:

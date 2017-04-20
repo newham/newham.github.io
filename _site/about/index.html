@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" style="user-select: auto;">
+<head>
+  <meta charset="utf-8">
+<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>About</title>
+ <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" type="text/css">
+ 
+</head>
+
+<body class="index-page">
+	<!-- Navbar -->
+<nav class="navbar navbar-danger navbar-transparent navbar-fixed-top navbar-color-on-scroll">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
+	        	<span class="sr-only">Toggle navigation</span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	        	<span class="icon-bar"></span>
+	    	</button>
+			<a href="">
+				<div class="logo-container">
+					<div class="logo">
+						<img src="/assets/img/logo.png" alt="Creative Tim Logo" rel="tooltip" title="<b>Material Kit</b> was Designed & Coded with care by the staff from <b>Creative Tim</b>"
+							data-placement="bottom" data-html="true">
+					</div>
+					<div class="brand">
+						Newham
+						Blog
+					</div>
+
+
+				</div>
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navigation-index">
+			<ul class="nav navbar-nav">
+				
+				<li><a href="/">Home</a></li>
+				<li class="active"><a href="/about/">About</a></li>
+				
+				<!--<li class="active"><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown
+												<b class="caret"></b>
+											<div class="ripple-container"></div></a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li class="dropdown-header">Dropdown header</li>
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+						<li class="divider"></li>
+						<li><a href="#">One more separated link</a></li>
+					</ul>
+				</li>-->
+			</ul>
+		</div>
+
+
+	</div>
+</nav>
+<!-- End Navbar -->
+
+	<div class="wrapper">
+    <div class="header header-filter" style="background-image: url(&quot;/assets/img/bg1.jpg&quot;); transform: translate3d(0px, 0px, 0px);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="brand">
+                        <h1>Newham's Blog</h1>
+                        <h3>A Badass Bootstrap UI Kit based on Material Design.</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="main main-raised">
+        <div class="section section-basic">
+            <div class="container">
+                <div class="title">
+                    <h2>About</h2>
+                </div>
+                <blockquote>
+    <p>
+    Let life be beautiful like summer flowers and death like autumn leaves
+    </p>
+    <small>
+    Tiger
+    </small>
+</blockquote>
+            </div>
+        </div>
+
+        
+
+    </div>
+    
+</div>
+
+	
+<footer class="footer">
+	<div class="container">
+		<nav class="pull-left">
+			<ul>
+				<li>
+					<a href="http://www.creative-tim.com">
+							Creative Tim
+						</a>
+				</li>
+				<li>
+					<a href="http://presentation.creative-tim.com">
+						   About Us
+						</a>
+				</li>
+				<li>
+					<a href="http://blog.creative-tim.com">
+						   Blog
+						</a>
+				</li>
+				<li>
+					<a href="http://www.creative-tim.com/license">
+							Licenses
+						</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="copyright pull-right">
+			© 2017 Newham. All rights reserved.
+		</div>
+	</div>
+</footer>
+<!--   Core JS Files   -->
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/material.min.js"></script>
+
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<!--<script src="/assets/js/nouislider.min.js" type="text/javascript"></script>-->
+
+<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
+<!--<script src="/assets/js/bootstrap-datepicker.js" type="text/javascript"></script>-->
+
+<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
+<script src="/assets/js/material-kit.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$().ready(function () {
+		// the body of this function is in assets/material-kit.js
+		// materialKit.initSliders();
+		window_width = $(window).width();
+
+		if (window_width >= 992) {
+			big_image = $('.wrapper > .header');
+
+			$(window).on('scroll', materialKitDemo.checkScrollForParallax);
+		}
+
+	});
+
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {% if paginator.total_pages > 1 %}
 <nav>
-  <ul class="pagination">
+  <ul class="pagination pagination-warning">
   {% if paginator.previous_page %}
     <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
   {% else %}
