@@ -3,16 +3,15 @@ layout: default
 title: Articles 
 ---
 
-<div class="row" style="background: #eee;padding-bottom:15px;border-radius: 3px;">
-
+<div class="row">
   {% for post in paginator.posts %}
-  <div class="col-md-4 ">
-    <div class="card card-nav-tabs" style="min-height: 360px;">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="card card-nav-tabs" style="min-height: 250px;">
       <div class="header header-my">
-        <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
           <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-        </h3>
-        <p class="text-right">{{ post.date | date:"%d/%m/%Y"}}</p>
+        </h4>
+        <p class="text-left">{{ post.date | date:"%d/%m/%Y"}}</p>
           {% for label in post.categories %}
           <span class="label label-success">{{label}}</span> {%endfor%}
       </div>

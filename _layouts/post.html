@@ -1,47 +1,47 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 {% include head.html %}
+
 <body>
-	 <div class="main main-raised">
-		 
-        <div class="section section-basic">
-			<a href="{{ site.baseurl }}/"  class="btn btn-warning" style="margin-left:20px;">Home</a>
-            <div class="container">
-                <div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="text-center">
-						<h1>{{ page.title }}</h1>
-						<h4>{{ page.date | date:"%d/%m/%Y" }}</h4>
-						{% if page.author %}
-						<h5>
-						By {{page.author}}
-						</h5>
-						{% endif %}
-						</div>
-						<p>
-							{{ content }}
-						</p>
-						<!--go page-->
-						<div>
-							{%if page.next.url%}
+	
+	<div class="wrapper">
+		<div class="header header-filter" style="min-height:100px;max-height: 100px;  background-image: url('{{site.baseurl}}/assets/img/bg5.jpg');">
+			
+		</div>
+		<div class="main main-raised">
+			<div class="section section-basic">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8 col-md-offset-2">
+							<div class="text-center">
+								<h1>{{ page.title }}</h1>
+								<h4>{{ page.date | date:"%d/%m/%Y" }}</h4>
+								{% if page.author %}
+								<h5>
+									By {{page.author}}
+								</h5>
+								{% endif %}
+							</div>
+							<p>
+								{{ content }}
+							</p>
+							<!--go page-->
+							<div>
+								{%if page.next.url%}
 								<a href="{{page.next.url}}" class="btn btn-danger btn-round pull-left">
 									Newer
-								</a>
-								{%endif%}
-								{%if page.previous.url%}
+								</a> {%endif%} {%if page.previous.url%}
 								<a href="{{page.previous.url}}" class="btn btn-danger btn-round pull-right">
 									Older
-								</a>
-							{%endif%}
+								</a> {%endif%}
+							</div>
 						</div>
 					</div>
 				</div>
-            </div>
-        </div>
-    </div>
-	
-    {% include footer.html %}
+			</div>
+		</div>
+	</div>
+	{% include footer.html %}
 </body>
+
 </html>
-
-
