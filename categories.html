@@ -1,0 +1,25 @@
+---
+layout: default
+title: Categories
+permalink: /categories/
+---
+
+<h2 class="terminal-prompt">{{ page.title }}</h2>
+{% for category in site.categories %}
+<fieldset>
+  <legend><code>{{ category | first }}</code> </legend>
+  <!-- [{{ category | last | size }}] -->
+  <div>
+    <a href="#{{ category | first }}"></a>
+    <div id="{{ category | first }}">
+      <ol class="terminal-toc">
+        {% for post in category.last %}
+        <li><a href="{{ post.url }}">[{{ post.date | date:"%Y/%m/%d"}}]  {{ post.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+
+</fieldset>
+<br>
+{% endfor %}

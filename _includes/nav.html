@@ -1,58 +1,17 @@
 <!-- Navbar -->
-<nav class="navbar navbar-danger navbar-transparent navbar-fixed-top navbar-color-on-scroll">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-index">
-	        	<span class="sr-only">Toggle navigation</span>
-	        	<span class="icon-bar"></span>
-	        	<span class="icon-bar"></span>
-	        	<span class="icon-bar"></span>
-	    	</button>
-			<a href="{{site.baseurl}}">
-				<div class="logo-container">
-					<div class="logo">
-						<img src="{{site.baseurl}}/assets/img/logo.png" alt="Newham's head icon" rel="tooltip"
-							data-placement="bottom" data-html="true">
-					</div>
-					<div class="brand">
-						Newham
-						Blog
-					</div>
 
-
-				</div>
-			</a>
-		</div>
-		<div class="collapse navbar-collapse" id="navigation-index">
-			<ul class="nav navbar-nav">
-				{% if page.url==site.page.about %}
-				<li><a href="{{site.baseurl}}/">Home</a></li>
-				<li class="active"><a href="{{site.baseurl}}{{site.page.about}}">About</a></li>
-				{%else%}
-				<li class="active"><a href="{{site.baseurl}}/">Home</a></li>
-				<li><a href="{{site.baseurl}}{{site.page.about}}">About</a></li>
-				{% endif %}
-				<!--<li class="active"><a href="#">Link</a></li>
-				<li><a href="#">Link</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dropdown
-												<b class="caret"></b>
-											<div class="ripple-container"></div></a>
-					<ul class="dropdown-menu dropdown-menu-right">
-						<li class="dropdown-header">Dropdown header</li>
-						<li><a href="#">Action</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
-						<li class="divider"></li>
-						<li><a href="#">Separated link</a></li>
-						<li class="divider"></li>
-						<li><a href="#">One more separated link</a></li>
-					</ul>
-				</li>-->
-			</ul>
-		</div>
-
-
+<div class="terminal-nav">
+	<div class="terminal-logo">
+		<div class="logo terminal-prompt"><a href="{{site.baseurl}}/" class="no-style">Newham</a></div>
 	</div>
-</nav>
+	<nav class="terminal-menu">
+		<ul>
+			<li><a class="menu-item {% if page.url==site.page.index %}active{% endif %}" href="{{site.baseurl}}{{site.page.index}}">Home</a></li>
+			<li><a class="menu-item {% if page.url==site.page.categories %}active{% endif %}" href="{{site.baseurl}}{{site.page.categories}}">Categories</a></li>
+			<li><a class="menu-item {% if page.url==site.page.about %}active{% endif %}" href="{{site.baseurl}}{{site.page.about}}">About</a></li>
+		</ul>
+	</nav>
+</div>
+
+
 <!-- End Navbar -->

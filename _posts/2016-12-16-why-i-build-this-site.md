@@ -2,7 +2,7 @@
 layout: post
 title:  "Why I build this site"
 date:   2017-01-22 10:26:43 +0800
-categories: task
+categories: task jekyll
 description: "My purpose is to build a website myself"
 ---
 

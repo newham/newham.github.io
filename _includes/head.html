@@ -1,9 +1,12 @@
 <head>
   <meta charset="utf-8">
-<!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  <!--   <meta name="viewport" content="width=device-width, initial-scale=1"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Newham's Blog-{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
- <!-- CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css">
- 
+  <!-- js -->
+  <script src="{{ site.baseurl }}/assets/js/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script src="{{ site.baseurl }}/assets/js/autotyper.min.js"></script>
 </head>

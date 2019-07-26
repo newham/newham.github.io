@@ -2,47 +2,27 @@
 <html lang="en">
 {% include head.html %}
 
-<body>
-	
-	<div class="wrapper">
-		<div class="header header-filter" style="min-height:100px;max-height: 100px;  background-image: url('{{site.baseurl}}/assets/img/bg5.jpg');">
-			
-		</div>
-		<div class="main main-raised">
-			<div class="section section-basic" style="padding-top:20px;">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<div class="text-center">
-								<h1>{{ page.title }}</h1>
-								<h4>{{ page.date | date:"%d/%m/%Y" }}</h4>
-								{% if page.author %}
-								<h5>
-									By {{page.author}}
-								</h5>
-								{% endif %}
-							</div>
-							<div style="height: 5px;background: #f44336;"></div>
-							<p>
-								{{ content }}
-							</p>
-							<!--go page-->
-							<div>
-								{%if page.next.url%}
-								<a href="{{page.next.url}}" class="btn btn-danger btn-round pull-left">
-									Newer
-								</a> {%endif%} {%if page.previous.url%}
-								<a href="{{page.previous.url}}" class="btn btn-danger btn-round pull-right">
-									Older
-								</a> {%endif%}
-							</div>
-						</div>
-					</div>
+<body class="terminal">
+	<div class="container">
+		{% include nav.html %}
+		<br>
+		<h2 class="terminal-prompt">{{ page.title }}</h2>
+		<p class="terminal-prompt">{{ page.date | date:"%Y/%m/%d" }}{% if page.author %}
+			By {{page.author}}
+			{% endif %}</p>
+		<fieldset>
+			<legend>
+				<div class="btn-group">
+					<a class="btn btn-error btn-ghost" href="{{page.previous.url}}">Prev</a>
+					<!-- <a class="btn btn-default btn-ghost" href="{{site.baseurl}}/">Home</a> -->
+					<a class="btn btn-primary btn-ghost" href="{{page.next.url}}">Next</a>
 				</div>
-			</div>
-		</div>
+			</legend>
+			<p>
+				{{ content }}
+			</p>
+		</fieldset>
 	</div>
-	{% include footer.html %}
 </body>
 
 </html>

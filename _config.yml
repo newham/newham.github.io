@@ -19,12 +19,13 @@ sass:
   style:            :compressed
 
 # Pagination
-paginate:           6
-paginate_path:      /page:num/
+paginate:           10
+paginate_path:      /page/:num
 
 gems:
   - jekyll-paginate
 
 page:
+  categories: /categories/
   about: /about/
   index: /

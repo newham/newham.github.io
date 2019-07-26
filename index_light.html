@@ -1,0 +1,67 @@
+--- 
+layout: default 
+title: Articles 
+---
+
+<div class="row">
+  {% for post in paginator.posts %}
+  <div class="col-md-4 col-sm-6 col-xs-12">
+    <div class="card card-nav-tabs" style="min-height: 250px;">
+      <div class="header header-my">
+        <h4><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        </h4>
+        <p class="text-left">{{ post.date | date:"%d/%m/%Y"}}</p>
+          {% for label in post.categories %}
+          <span class="label label-success">{{label}}</span> {%endfor%}
+      </div>
+      <div class="content" >
+        <p>
+          {% if post.description %} {{ post.description }} {% endif %}
+        </p>
+      </div>
+    </div>
+    
+  </div>
+{%endfor%}
+</div>
+
+
+
+  <!--<div class="row">
+
+  <div class="col-xs-12 col-sm-3">
+    <h1>Categories</h1>
+    <br> {% for category in site.categories %}
+    <div class="list">
+      <a href="#{{ category | first }}" data-toggle="collapse" class="text-uppercase">{{ category | first }} <span class="badge">{{ category | last | size }}</span></a>
+      <div id="{{ category | first }}" class="collapse">
+        <ul>
+          {% for post in category.last %}
+
+          <li>[{{ post.date | date:"%d/%m/%Y"}}] <a href="{{ post.url }}">{{ post.title }}</a></li>
+
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+  <div class="col-xs-12 col-sm-9">
+    <h1>All Articles</h1>
+    {% for post in paginator.posts %}
+    <div class="border-bottom-dashed">
+      <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      {% if post.description %}
+      <p>{{ post.description }}</p>
+      {% endif %}
+      <div class="text-right">{{ post.date | date: "%b %-d, %Y" }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+</div>-->
+  {% include pagination.html %}
