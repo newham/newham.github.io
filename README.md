@@ -1,5 +1,6 @@
 # newham.github.io
-Newham's Technology Blog
+Newham's Technology Blog at [newham.github.io](https://newham.github.io)   
 
-Welcome to my site  
-The website's theme is base on [material-kit](http://demos.creative-tim.com/material-kit/index.html),redesigned by me.
+<img src="assets/img/newham.github.io.png">
+
+Thanks to a CSS theme [terminalcss](https://terminalcss.xyz)  
