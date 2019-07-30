@@ -9,7 +9,7 @@ title: Articles
     <ol class="terminal-toc">
       {% for post in paginator.posts %}
       <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}-{{ post.date | date:"%Y/%m/%d"}}</a>
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date:"%Y/%m/%d-%H:%M:%S"}} {{ post.title }}</a>
         {% for label in post.categories %}
         <code>{{label}}</code>
         {%endfor%}
