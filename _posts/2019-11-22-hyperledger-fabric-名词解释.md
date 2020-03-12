@@ -5,9 +5,6 @@ date : 2019-11-22 12:53:37 +0800
 categories : hyperledger fabric
 description : hyperledger fabric 中文名词解释
 ---
-
-# hyperledger fabric 名词解释
-
 ## 1 Block – 区块 
 
 在⼀个通道上，区块是⼀组有序交易的集合。在通道中经过加密（哈希加密） 

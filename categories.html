@@ -4,19 +4,19 @@ title: Categories
 permalink: /categories/
 ---
 
-<fieldset>
-  <legend>{{ page.title }}</legend>
+<h2>{{ page.title }}</h2>
+<div>
   <ul>
     {% for category in site.categories %}
     <li>
       <code>{{ category | first }}</code>
-      <ol class="terminal-toc">
+      <ul>
         {% for post in category.last %}
         <li><a href="{{ post.url }}">[{{ post.date | date:"%Y/%m/%d-%H:%M:%S"}}] {{ post.title }}</a></li>
         {% endfor %}
-      </ol>
+      </ul>
     </li>
+    <br>
     {% endfor %}
   </ul>
-</fieldset>
-<br>
+</div>

@@ -3,22 +3,28 @@ layout: default
 title: Articles
 ---
 
-<fieldset>
-  <legend>All Articles</legend>
-  <div>
-    <ol class="terminal-toc">
-      {% for post in paginator.posts %}
-      <li>
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date:"%Y/%m/%d-%H:%M:%S"}} {{ post.title }}</a>
+<div>
+  <h2>All Articles</h2>
+  <ol class="terminal-toc">
+    {% for post in paginator.posts %}
+    <li>
+      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date:"%Y/%m/%d-%H:%M:%S"}} {{ post.title }}</a>
+    </li>
+    <!-- <div>
         {% for label in post.categories %}
         <code>{{label}}</code>
         {%endfor%}
-      </li>
-      {%endfor%}
-    </ol>
-  </div>
+      </div> -->
+    <div>
+      <em>
+        {{post.description}}
+      </em>
+    </div>
+    <br>
+    {%endfor%}
+  </ol>
   <div>
     {% include pagination.html %}
   </div>
-</fieldset>
+</div>
 <br>

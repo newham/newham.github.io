@@ -6,29 +6,31 @@
 	<div class="container">
 		{% include nav.html %}
 		<br>
-		<h2 id="title"></h2>
-		<script>
-			type("#title",["> {{ page.title }}"]);
-		</script>
-		<p>> {{ page.date | date:"%Y/%m/%d" }}{% if page.author %}
+		<h2>{{ page.title }}</h2>
+		<p>
+			{{ page.date | date:"%Y/%m/%d %H:%M:%S" }}{% if page.author %}
 			By {{page.author}}
-			{% endif %}</p>
-		<fieldset>
-			<legend>
-				<div class="btn-group">
-					{%if page.previous.url%}
-					<a class="btn btn-error btn-ghost" href="{{page.previous.url}}"><<</a>
-					{%endif%}
-					<!-- <a class="btn btn-default btn-ghost" href="{{site.baseurl}}/">Home</a> -->
-					{%if page.next.url%}
-					<a class="btn btn-primary btn-ghost" href="{{page.next.url}}">>></a>
-					{%endif%}
-				</div>
-			</legend>
-			<p>
-				{{ content }}
-			</p>
-		</fieldset>
+			{% endif %}
+		</p>
+		<div>
+			{% for category in site.categories %}
+			<code>{{ category | first }}</code>
+			{% endfor %}
+		</div>
+		<hr>
+		<p>
+			{{ content }}
+		</p>
+		<hr>
+		<div style="margin-bottom: 40px;">
+			{%if page.previous.url%}
+			<a href="{{page.previous.url}}" class="btn btn-primary" >Older</a>
+			{%endif%}
+			<!-- <a class="btn btn-default btn-ghost" href="{{site.baseurl}}/">Home</a> -->
+			{%if page.next.url%}
+			<a href="{{page.next.url}}" style="float: right;" class="btn btn-primary">Newer</a>
+			{%endif%}
+		</div>
 	</div>
 </body>
 
