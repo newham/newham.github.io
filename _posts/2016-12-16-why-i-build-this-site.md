@@ -8,4 +8,4 @@ description: "My purpose is to build a website myself"
 
 ### I want to build a website myself
 
-### I use this blog website to share my story and knowledge with others!
+### I use this blog website to share my story and knowledge with you!
