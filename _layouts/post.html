@@ -1,37 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-
-<body class="terminal">
-	<div class="container">
-		{% include nav.html %}
-		<br>
-		<h2>{{ page.title }}</h2>
-		<p>
-			{{ page.date | date:"%Y/%m/%d %H:%M:%S" }}{% if page.author %}
-			By {{page.author}}
-			{% endif %}
-		</p>
-		<div>
-			{% for category in site.categories %}
-			<code>{{ category | first }}</code>
-			{% endfor %}
-		</div>
-		<hr>
-		<p>
-			{{ content }}
-		</p>
-		<hr>
-		<div style="margin-bottom: 40px;">
-			{%if page.previous.url%}
-			<a href="{{page.previous.url}}" class="btn btn-primary" >Older</a>
-			{%endif%}
-			<!-- <a class="btn btn-default btn-ghost" href="{{site.baseurl}}/">Home</a> -->
-			{%if page.next.url%}
-			<a href="{{page.next.url}}" style="float: right;" class="btn btn-primary">Newer</a>
-			{%endif%}
-		</div>
-	</div>
-</body>
-
-</html>
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+<p>
+	{{ page.date | date:"%Y/%m/%d %H:%M:%S" }}{% if page.author %}
+	By {{page.author}}
+	{% endif %}
+</p>
+<div>
+	{% for category in site.categories %}
+	<code>{{ category | first }}</code>
+	{% endfor %}
+</div>
+<hr>
+<p>
+	{{ content }}
+</p>
+<hr>
+<div>
+	{%if page.previous.url%}
+	<a href="{{page.previous.url}}" class="btn btn-primary">Older</a>
+	{%endif%}
+	<!-- <a class="btn btn-default btn-ghost" href="{{site.baseurl}}/">Home</a> -->
+	{%if page.next.url%}
+	<a href="{{page.next.url}}" style="float: right;" class="btn btn-primary">Newer</a>
+	{%endif%}
+</div>

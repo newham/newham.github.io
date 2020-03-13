@@ -5,24 +5,16 @@ title: Articles
 
 <div>
   <h2>All Articles</h2>
-  <ol class="terminal-toc">
-    {% for post in paginator.posts %}
-    <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.date | date:"%Y/%m/%d-%H:%M:%S"}} {{ post.title }}</a>
-    </li>
-    <!-- <div>
-        {% for label in post.categories %}
-        <code>{{label}}</code>
-        {%endfor%}
-      </div> -->
-    <div>
-      <em>
-        {{post.description}}
-      </em>
-    </div>
-    <br>
-    {%endfor%}
-  </ol>
+
+  {% for post in paginator.posts %}
+  {{ post.date | date:"%Y/%m/%d %H:%M"}}
+
+  <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+  <div class="description">
+    > {{post.description}}
+  </div>
+  {%endfor%}
+
   <div>
     {% include pagination.html %}
   </div>
