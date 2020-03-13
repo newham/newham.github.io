@@ -16,9 +16,9 @@
     // border-right: 1px solid #eee;
     // border-bottom: 1px solid #eee;
     background-color: white;
-    box-shadow: 0 0 2px #bbb; 
-    border-bottom-left-radius: 2px ;
-    border-bottom-right-radius: 2px ;
+    // box-shadow: 0 0 2px #bbb; 
+    // border-bottom-left-radius: 2px ;
+    // border-bottom-right-radius: 2px ;
 }
 
 .description{
@@ -75,11 +75,15 @@ hr{
 }
 
 hr{
-    border-bottom: 1px dashed #eee;
+    border-bottom: 0px dashed #eee;
     margin-left: -20px;
     margin-right: -20px;
 }
 
 .time{
     color: #a1a1a1;
+}
+
+.align-center{
+    text-align: center;
 }
