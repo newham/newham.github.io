@@ -5,10 +5,12 @@ description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+src: "https://github.com/newham/newham.github.io"
 
 author: 
-  name : Newham
+  name : Liu Han
   email: newham.cn@gmail.com
+  github: https://github.com/newham/
 
 # Build settings
 markdown: kramdown

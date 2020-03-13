@@ -1,5 +1,5 @@
 :root{
-    --page-width:45em;
+    --page-width:50em;
 }
 
 .my-nav{
@@ -7,16 +7,22 @@
     position: fixed;
     padding-left: 20px;
     padding-right: 20px;
-    // background: white;
-    // overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
 }
 
 .container{
     padding-bottom: 0.5em;
+    // border-bottom: 1px solid #ccc;
+    // border-left: 1px solid #eee;
+    // border-right: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
+    background-color: white;
+    box-shadow: 0 0 2px #bbb; 
+    border-bottom-left-radius: 2px ;
+    border-bottom-right-radius: 2px ;
 }
 
 .description{
-    margin-bottom: 30px;
+    color: #555;
 }
 
 hr{
@@ -26,4 +32,54 @@ hr{
 
 .active{
     color: rgb(9, 153, 219) !important;
+}
+
+// body{
+    // padding-bottom:20px;
+    // background: #f3f3f3;
+// }
+
+.pagination{
+    height: 20px;
+}
+
+.paginator {
+    text-align:left; 
+}
+
+.paginator ul li{
+    display: inline-block;
+    line-height:20px; 
+    list-style:none;
+}
+
+.no_active{
+    color: black;
+}
+
+.no-bottom-margin{
+    margin-bottom: 0px;
+}
+
+.footer{
+    text-align: center;
+}
+
+.author{
+    text-align: center;
+}
+
+.author img{
+    height: 80px;
+    width: 80px;
+}
+
+hr{
+    border-bottom: 1px dashed #eee;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.time{
+    color: #a1a1a1;
 }

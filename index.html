@@ -1,22 +1,22 @@
 ---
 layout: default
-title: 所有文章
+title: 目录
 ---
 
 <div>
-  <h2>{{page.title}}</h2>
+
 
   {% for post in paginator.posts %}
-  <ins>{{ post.date | date:"%Y/%m/%d %H:%M"}}</ins>
+  <label class="time">{{ post.date | date:"%Y/%m/%d %H:%M"}}</label>
 
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   <div class="description">
     - {{post.description}}
   </div>
+  <hr>
   {%endfor%}
 
   <div>
     {% include pagination.html %}
   </div>
 </div>
-<br>

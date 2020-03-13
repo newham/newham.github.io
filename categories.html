@@ -4,9 +4,8 @@ title: 分类
 permalink: /categories/
 ---
 
-<h2>{{ page.title }}</h2>
 <div>
-  <ul>
+  <ul class="no-bottom-margin">
     {% for category in site.categories %}
     <li>
       <code>{{ category | first }}</code>
@@ -16,7 +15,8 @@ permalink: /categories/
         {% endfor %}
       </ul>
     </li>
-    <br>
+    <hr>
     {% endfor %}
   </ul>
+  - end
 </div>

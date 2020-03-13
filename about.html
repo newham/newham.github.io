@@ -5,26 +5,15 @@ permalink: /about/
 ---
 
 <div>
-    <h2>{{page.title}}</h2>
     <p id="title"></p>
     <script>
-        type("#title", ["> :) Hi , Let life be beautiful like summer flowers ..."])
+        type("#title", ["> :) Hi , Let life be beautiful like summer flowers ... "])
     </script>
     <p>
-        My name is Newham, a computer programmer (o_^)<br>
-        This website\'s theme is base on <a href="https://terminalcss.xyz">https://terminalcss.xyz</a><br>
-        If you like my blog site , email to me [newham.cn@gmail.com]<br>
+        My name is {{site.author.name}}, a computer programmer (o_^)
     </p>
+    Thanks to: <a href="https://terminalcss.xyz">https://terminalcss.xyz</a><br>
 </div>
-<br>
-<div>
-    <h2>作者</h2>
-    <address>
-        Src <a href="https://github.com/newham/newham.github.io">newham.github.io</a><br>
-        Github <a href="https://github.com/newham">https://github.com/newham</a><br>
-        Email <a href="mailto:newham.cn@gmail.com">newham.cn@gmail.com</a><br>
-        © 2019 {{ site.author.name }}. All rights reserved.<br>
-        China
-    </address>
-</div>
-<br>
+<hr>
+<!-- footer -->
+{% include footer.html %}
