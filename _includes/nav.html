@@ -2,13 +2,13 @@
 
 <div class="terminal-nav">
 	<div class="terminal-logo">
-		<div class="logo terminal-prompt"><a href="{{site.baseurl}}/" class="no-style">Newham</a></div>
+		<div class="logo terminal-prompt"><a href="{{site.baseurl}}/" class="no-style">{{site.title}}</a></div>
 	</div>
 	<nav class="terminal-menu">
 		<ul>
-			<li><a class="menu-item {% if page.url==site.page.index %}active{% endif %}" href="{{site.baseurl}}{{site.page.index}}">Home</a></li>
-			<li><a class="menu-item {% if page.url==site.page.categories %}active{% endif %}" href="{{site.baseurl}}{{site.page.categories}}">Categories</a></li>
-			<li><a class="menu-item {% if page.url==site.page.about %}active{% endif %}" href="{{site.baseurl}}{{site.page.about}}">About</a></li>
+			<li><a class="menu-item {% if page.url==site.page.index %}active{% endif %}" href="{{site.baseurl}}{{site.page.index}}">主页</a></li>
+			<li><a class="menu-item {% if page.url==site.page.categories %}active{% endif %}" href="{{site.baseurl}}{{site.page.categories}}">分类</a></li>
+			<li><a class="menu-item {% if page.url==site.page.about %}active{% endif %}" href="{{site.baseurl}}{{site.page.about}}">关于</a></li>
 		</ul>
 	</nav>
 </div>

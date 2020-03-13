@@ -4,7 +4,7 @@
   {% if paginator.previous_page %}
     <li><a class="menu-item" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a></li>
   {% else %}
-    <li><span>&laquo; Prev</span></li>
+    <li><span>&laquo; 上一页</span></li>
   {% endif %}
 
   {% for page in (1..paginator.total_pages) %}
@@ -22,7 +22,7 @@
   {% if paginator.next_page %}
     <li><a class="menu-item" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a></li>
   {% else %}
-    <li><span>Next &raquo;</span></li>
+    <li><span>下一页 &raquo;</span></li>
   {% endif %}
   </ul>
 </nav>

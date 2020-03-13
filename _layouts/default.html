@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" style="user-select: auto;">
+<html lang="zh-cmn-Hans" style="user-select: auto;">
 {% include head.html %}
 
 <body class="terminal">
-	<div class="my-nav">
+	<div class="my-nav" id="nav">
 		{% include nav.html %}
 	</div>
+	<script>
+		function resize() {
+			// 浏览器窗口变化后需要做的事情
+			if (document.body.scrollWidth < 1000) {
+				document.getElementById('nav').style.position = 'relative';
+			} else {
+				document.getElementById('nav').style.position = 'fixed';
+			}
+		}
+		window.onresize = resize;
+		window.onload = resize;
+	</script>
 	<div class="container">
 		{% include content.html %}
 		{% include footer.html %}

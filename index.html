@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Articles
+title: 所有文章
 ---
 
 <div>
-  <h2>All Articles</h2>
+  <h2>{{page.title}}</h2>
 
   {% for post in paginator.posts %}
-  {{ post.date | date:"%Y/%m/%d %H:%M"}}
+  <ins>{{ post.date | date:"%Y/%m/%d %H:%M"}}</ins>
 
   <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
   <div class="description">
-    > {{post.description}}
+    - {{post.description}}
   </div>
   {%endfor%}
 
