@@ -7,3 +7,5 @@ description : a update record description article
 ---
 
 v1.0.1 更换至浅色主题，全新设计页面
+
+V1.0.2 更新css样式，去掉边框，更多留白
