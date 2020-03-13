@@ -1,22 +1,19 @@
 ---
 layout: default
-title: 关于
+title: About
 permalink: /about/
 ---
 
-<div class="align-center">
-    <div class="author">
-        <img src="{{ site.baseurl }}/assets/img/logo.png">
-    </div>
-    <p id="title"></p>
-    <script>
-        type("#title", ["> :) Hi , Let life be beautiful like summer flowers ... "])
-    </script>
-    <p>
-        My name is {{site.author.name}}, a computer programmer (o_^)
-    </p>
-    Thanks to: <a href="https://terminalcss.xyz">https://terminalcss.xyz</a><br>
+
+<p id="title"></p>
+<script>
+    type("#title", ["> :) Hi , Let life be beautiful like summer flowers ... "])
+</script>
+<div>
+    My name is {{site.author.name}}, a computer programmer (o_^)
 </div>
+<hr>
+Thanks to: <a href="https://terminalcss.xyz">https://terminalcss.xyz</a>
 <hr>
 <!-- footer -->
 {% include footer.html %}
