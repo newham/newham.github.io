@@ -5,14 +5,11 @@ layout: default
 	<label class="time">{{ page.date | date:"%Y/%m/%d %H:%M:%S" }}{% if page.author %}</label>
 	By {{page.author}}
 	{% endif %}
-</div>
-<hr>
-<div>
-	{% for category in site.categories %}
-	<code>{{ category | first }}</code>
+	{% for category in page.categories %}
+	<code>{{ category }}</code>
 	{% endfor %}
 </div>
-<hr>
+<hr class="hr-border">
 <p>
 	{{ content }}
 </p>
