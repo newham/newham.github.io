@@ -1,6 +1,12 @@
 # newham.github.io
 Newham's Technology Blog at [newham.github.io](https://newham.github.io)   
 
-<img src="assets/img/newham.github.io.png">
+**cap1**
+
+<img src="cap_1.jpg">
+  
+**cap2**
+
+<img src="cap_2.jpg">
 
 Thanks to a CSS theme [terminalcss](https://terminalcss.xyz)  
