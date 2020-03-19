@@ -1,12 +1,13 @@
 :root{
     --page-width:50em;
+    --primary-color:#0366d6;
 }
 
 .my-nav{
     width: 100%;
     position: fixed;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .container{
@@ -31,12 +32,13 @@ hr{
 }
 
 .active{
-    color: rgb(9, 153, 219) !important;
+    color:var(--primary-color) !important;
 }
 
 body{
     // padding-bottom:20px;
     // background: #f3f3f3;
+    padding-bottom: 10px;
 }
 
 .pagination{
@@ -57,16 +59,9 @@ body{
     color: black;
 }
 
-.no-bottom-margin{
+.no-v-margin{
     margin-bottom: 0px;
-}
-
-.footer{
-    // text-align: center;
-}
-
-.author{
-    // text-align: center;
+    margin-top: 0px;
 }
 
 .author img{
@@ -76,8 +71,12 @@ body{
 
 hr{
     border-bottom: 0px dashed #eee;
-    margin-left: -20px;
-    margin-right: -20px;
+    // margin-left: -20px;
+    // margin-right: -20px;
+}
+
+.hr-border{
+    border-bottom: 1px dashed #ccc;
 }
 
 .time{
@@ -86,4 +85,18 @@ hr{
 
 .align-center{
     text-align: center;
+}
+
+.terminal-prompt::before {
+    content: "";
+}
+
+code{
+    background: #eee;
+}
+
+pre{
+    background: #f3f3f3;
+    border: 0px;
+    border-radius: 12px;
 }
